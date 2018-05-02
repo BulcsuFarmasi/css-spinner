@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-   <div class="main spinner">
+   <div class="main">
        <h1>Hello, welcome to my website!</h1>
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
            Debitis adipisci corporis accusamus, reprehenderit doloremque 
@@ -16,6 +16,16 @@
            suscipit? Nihil dolore hic vitae! Error, culpa sunt. Inventore, 
            voluptatum. Aperiam fuga eos, necessitatibus expedita ab illum 
            inventore consequatur rem ea repellat qui, voluptatum perferendis!</p>
-   </div> 
+   </div>
+   <script>
+       document.querySelector('.main p').style.display = 'none';
+       document.querySelector('.main').classList.add('spinner');
+
+       // Mimic a server req
+       setTimeout(() => {
+        document.querySelector('.main').classList.remove('spinner');   
+        document.querySelector('.main p').style.display = 'block';
+       }, 4000)
+   </script>
 </body>
 </html>
